@@ -76,9 +76,9 @@ def callback_inline(call):
                                           callback_data='key 3')
         key4 = types.InlineKeyboardButton(text='Начать поиск...'+emoji.emojize(':magnifying_glass_tilted_left:'),
                                           callback_data='key4')
-        key5 = types.InlineKeyboardButton(text='Поддержать нас' + emoji.emojize(':money_with_wings:'),
-                                          callback_data='key4')
-        mainmenu.add(key1, key2, key3, key4,key5)
+        #key5 = types.InlineKeyboardButton(text='Поддержать нас' + emoji.emojize(':money_with_wings:'),
+                                         # callback_data='key4')
+        mainmenu.add(key1, key2, key3, key4)
         bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id, reply_markup=mainmenu)
     elif call.data == "key1":
         next_menu = types.InlineKeyboardMarkup()
